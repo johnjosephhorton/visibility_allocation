@@ -1,0 +1,19 @@
+\input{insitustart.tex} 
+
+\section{Platform model}
+A platform has constant demand (i.e., buyers) each period, normalized to measure 1. There is also supply (i.e., workers) normalized to measure 1. Buyers are homogeneous, whereas workers have a ``type'': with probability $\theta$, a worker is good, in which case when paired with a buyer, they generate an output of $y$. When they are bad (which happens with probability $1-\theta$), they generate an output of $0$. We will assume that the cost of production for the worker is $0$. The only way the market/platform can learn if a worker is good or bad is by having them be hired by a buyer for one period. No firm will ever hire a worker revealed to be bad, and hence when a rookie is hired and revealed to be bad, the rookie exits the marketplace. If they are good, they become a veteran. 
+
+The platform fully controls matching and decides who buyers hire. Each period, the firm has to decide what fraction of demand is paired with novices. Future periods are discounted with $\delta \in (0,1)$. The total social surplus is thus: 
+\begin{equation} 
+V(t) = \sum_{\tau=0}^t \left(y(1-x_\tau) + yx_\tau\theta\right)\delta^\tau
+\end{equation}
+subject to the constraint on the policy function that $\forall t 1-x_t \le s_v(t-1)$, where $s_v(t) = \sum_{\tau = 0}^t \theta x_\tau$, i.e., the number of buyers paired with veterans cannot exceed the number of veterans available in that period, based on past choices of the policy variable. 
+
+\subsection{Questions}
+
+\begin{itemize} 
+\item What's the platform's optimal policy function? 
+\item Under what conditions will the firm ever leave a veteran unpaired in a period?
+\end{itemize} 
+
+\input{insituend.tex}

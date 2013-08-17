@@ -1,0 +1,11 @@
+* Theory Section 
+
+Show that the problem 
+
+* Empirical Section 
+
+More fully illustrate how many of the invited applicants decline their invitations 
+
+Show how the result works in practice 
+
+* 

@@ -1,0 +1,13 @@
+Junghoo Cho, Sourashis Roy "Impact of Web Search Engines on Page
+Popularity." In Proceedings of the World-Wide Web Conference (WWW),
+May 2004.
+
+Junghoo Cho, Sourashis Roy, Robert E. Adams "Page Quality: In Search
+of an Unbiased Web Ranking." In Proceedings of ACM International
+Conference on Management of Data (SIGMOD), June 2005.
+
+Sandeep Pandey, Sourashis Roy, Christopher Olston, Junghoo Cho, Soumen
+Chakrabarti "Shuffling a Stacked Deck: The Case for Partially
+Randomized Ranking of Search Engine Results" In Proceedings of the
+International Conference on Very Large Databases (VLDB), September
+2005.

@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+
+\usepackage{algorithmic}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{dcolumn} 
+\usepackage{epstopdf}
+\usepackage{fourier}
+\usepackage{framed}
+\usepackage{fullpage}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{longtable} 
+\usepackage{natbib}
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage{silence}
+\usepackage{tabularx}
+\usepackage{verbatim}
+
+
+% http://tex.stackexchange.com/questions/14938/plainnat-bst-without-natbib
+\let\chapter\section
+\usepackage[ruled]{algorithm2e}
+
+\renewcommand{\algorithmcfname}{ALGORITHM}
+\newtheorem{proposition}{Proposition}
+
+ \onehalfspace
+% \triplespace 
+%\doublespacing 
+
+%linespread{3}
+
+\begin{document}
+
+\title{The Allocation of Prominence on Two-Sided Platforms}
+
+% \author{
+%      JOHN J. HORTON 
+%      \affil{oDesk Research}
+%     JOHN GUNNAR CARLSSON 
+%     \affil{University of Minnesota}
+%     IOANNIS ANTONELLIS 
+%     \affil{oDesk Research}
+%     PANAGIOTIS PAPADIMITRIOU
+%     \affil{oDesk Research}
+%     GREG LITTLE 
+%     \affil{oDesk Research}
+%  }
+
+% Todo 
+% references to the equity criterion 
+% replace visibility with prominence 
+% Fix the latex sed thing 
+% Move to importing create paper (.sh?)
+% Add a TK punch list feature 
+
+\maketitle
+
+\input{abstract.tex}
+
+\input{intro.tex}
+\input{platform_problem.tex}
+\input{equitable-allocation.tex}
+\input{expr.tex}
+\input{expr-comparison.tex}
+\input{conclusions.tex}
+
+\bibliographystyle{aer}
+\bibliography{visibility_allocation.bib}
+
+\end{document}

@@ -1,0 +1,294 @@
+%\input{insitustart.tex} 
+
+\section{Platform's design challenge} 
+Different platforms have different preferences of the matching of
+platform participants. These preferences presumably differ over
+time. For example, a nascent platform is probably more worried about
+market liquidity and growth, where as an established platform, focuses
+more on revenue, cost and retention. It is beyond the scope of this
+paper map various macro-level platform preferences to different
+strategies implemented via budgets for sellers. However, it is still
+useful to (a) characterize a common platform problem and (b) show how
+it is addressable via the controlled allocation of prominence.
+
+A common problem in electronic markets where quality is a factor is
+that novices---those without a market reputation---have difficulty in
+finding a trading partner and/or must sell a discount. For example,
+\cite{resnick2006value} found that new sellers without an eBay
+reputation ended up selling identical goods at an 8\% discount
+compared to veteran seller. This problem is perhaps more acute in
+labor markets, where uncertainty about seller quality and reputation
+is greater and potentially more important. 
+
+\cite{tervio2009superstars} develops a model of a labor market in
+which hiring firms focus too much attention on veterans and not enough
+on ``talent discovery'' i.e., the hiring of novices. The gist of the
+model is that talent discovered via hiring becomes common knowledge
+post-hire, and since workers are not obligated to stay with their
+hiring firm, hiring firms cannot fully recoup the costs of talent
+discovery. \cite{pallais2010inefficient} tested this model on oDesk
+with an experiment in which she hired a treatment group of 952 workers
+for a task and gave them public feedback for their work.  The control
+group received no job (and hence no feedback). Most of the workers in
+the experiment had no experience on the platform. Pallais finds that
+her treated group of workers were able to substantially raise their
+earnings once equipped with a reputation. In fact, the workers were
+able to earn more from other buyers than the total cost of the
+experiment with a few months.
+
+The theoretical results from Tervi{\"o} and empirical results from
+Pallais imply a clear challenge for platform creators, which is to
+push more firms to hire novices. In the model below, we will assume
+that the platform simply wants to maximize total social surplus. A
+for-profit platform actually has different incentives depending on
+price structure (for example, a platform that charges a fixed
+percentage will want to maximize the NPV of the wage bill), but for
+illustrative purposes, these complications are not relevant.
+
+% Novices---those without feedback or reputations---often have great
+% difficulty getting started in markets (TK - cite Zeckhauser). Online
+% labor markets are known to suffer this problem to an extreme degree
+% (TK - cite Pallais, Tervio, Stanton). In the Tervio model, The root of
+% the problem is that talent discovery is inefficiently under-supplied
+% in the marketplace, at least in part because workers cannot subsidize
+% their own discovery.
+ 
+% \subsection{Match probability as mediated by platform creators}
+
+% \subsection{Price level and structure---carved in stone?} 
+
+% When a platform entirely forgoes prices, prominence is still
+% allocated, but the allocation depends on some other criteria set by
+% the platform, such as lexical ordering, recent activity, chronology
+% etc. 
+
+% For example, craigslist orders results within
+% categories by time of posting, as does Amazon Mechanical Turk
+% (MTurk).\footnote{Not surprisingly, this time-based ordering leads to
+%   manipulation as participants try to increasing their prominence. See
+%   \cite{chilton2010task} for a discussion of this phenomena on MTurk.}
+% On other sites, returned results are often ordered based on some
+% algorithmic notion of relevancy, such as tf-idf or PageRank
+% \cite{page1999pagerank}.
+
+\subsection{Platform growth and talent discovery} 
+Consider a marketplace with a fixed pool of buyers with measure
+$1$. We will assume that the sellers are selling labor and that a
+buyer choosing to purchase labor from a particular seller can be
+thought of as hiring that seller. There are two types of sellers:
+those that are good, and produce an output of $1$ if hired, and bad,
+that produce nothing if hired. The proportion of good sellers is
+$\theta$ and the measure of sellers if $\theta^{-1}$.
+
+All sellers start as \emph{novices}. When a seller is hired, their
+type is revealed publicly to the marketplace. Bad sellers exit the
+marketplace, while good workers become \emph{veterans}. We will assume
+that all parties are price takers and that wages are $w_V$ for
+veterans and $w_N$ for novices, with $\theta < w_N < w_V < 1$ and $1-
+w_v > \theta - w_n$. This ensures that firms would rather hire a
+veteran than a novice, but they would rather hire a novice that not
+hire anyone at all.
+
+For any discount rate, the platform wants (a) all veterans to matched
+with buyers, to get the guaranteed payoff this promises) and (b) all
+other buyers hiring novices, in order to turn some fraction into
+veterans. If matching occurs in continuous time and $v(t)$ is the
+number of veterans in the marketplace, the socially optimal evolution
+of the marketplace will be:
+\begin{equation}
+v_{0}'(t) = (1-v_0(t))\theta
+\end{equation}
+with $v_0(0)=0$, which has the solution of $v_0(t) = 1-e^{-\theta
+  t}$. However, if the platform cannot fully control the matches that
+are formed, we can have a situation where multiple buyers compete for
+the services of the same veteran, even though only one match is
+possible. We will assume that veterans pick randomly from the pool of
+buyers courting them. Further, we will assume that buyers can sort
+themselves such that they can obtain the best possible terms (i.e.,
+all veterans will receive the same number of applicants, in contrast
+to a ball-and-urn model of applications where the realized number is
+binomial random variable).
+
+Let us not assume that a fraction $r$ of buyers will pair with novices
+and $1-r$ with veterans. We will indicate the measure of veterans at
+time $t$ as $v_1(t)$. This makes $v_1'(t) = r\theta$. At time $t$, the
+probability that buyer seeking the services of a veteran will be
+successful is $v(t) (1-r)^{-1}$. In equilibrium, the returns to
+seeking out a veteran have to be equal to seeking out a novice, hence
+$\theta - w_n = v_1(t)(1-r)^{-1} (1 - w_v)$ so $r = 1 - (1 -
+  w_v)(\theta - w_n)^{-1}v(t)$, and hence: 
+\begin{equation}
+  v_1'(t) = \left(1 - \frac{1 - w_v}{\theta - w_n}v_1(t)\right)\theta 
+\end{equation} 
+Since $1 - w_v > \theta - w_n$, we know that $v_1'(t) < v_0'(t)$---the
+supply of veterans grows more slowly in the unorganized market where
+buyers are allowed to compete for the scarce pool of veterans. Not
+only is growth slower, it eventually stalls completely once $\theta -
+w_N = v_1(t)(1-w_v)$. This ``stalling'' of the marketplace occurs once
+the number of veterans reaches $\underline{v} = (\theta - w_n)(1
+  - w_v)^{-1}$. Once the platform reaches $\underline{v}$, the
+talent-discovery stops and no novices every get hired: buyers are
+content to take their chances with the over-subscribed veterans. The
+expression for $\underline{v}$ offers intuitive comparative statics:
+the lower the baseline level of talent, lower the $\theta$, the more
+rapidly the marketplace stalls. Higher wages for novices has a
+similarly stifling effect, as does low wages for veterans.
+
+\subsection{Tilting the marketplace towards optimal growth}
+If the platform wanted to continue to grow at the optimal rate, it
+could divert the excess buyer attention away from the veterans and
+towards the buyers. To formalize this intuition, let us imagine that
+we are allocating the buyer attention (which as the same measure as
+the buyers, i.e., $1$) amongst the veterans the novices. We can think
+of this allocation as a ``budget'' we give to a veteran $b_v$ and a
+budget given to a novice, $b_n$.
+
+To obtain the optimal growth path for the platform, we need to
+allocate $v(t)$ of the attention to the veterans and $1-v(t)$ to the
+novices. The number of novice sellers at time $t$ is $\theta^{-1} -
+v(t)\left(1 - \theta^{-1}\right)$, and so
+\begin{eqnarray}
+b_v &=& v(t) \nonumber\\
+b_n &=& \frac{1-v(t)}{\theta^{-1} - v(t)\left(1 - \theta^{-1}\right)}
+\end{eqnarray} 
+
+\subsection{Static example with heterogeneous match probabilities}
+To give an example of the usefulness of this prominence budget
+conception, let us consider a platform that is no longer growing but
+simply wants to maximize the number of matches formed. Unlike in the
+simplified example before, let us more realistically assume that each
+seller $i$ has some exogenous match probability $q_i$ when exposed to
+a single buyer. As we assumed previously, sellers have limited
+capacity and thus can form at most one match. This means that for any
+seller, there are decreasing returns to attention by buyers. Let $b_i$
+be the number of ``impressions'', allocated to a seller. The total
+amount of impressions is $A$ (for attention).
+
+The probability that a seller fails to form a match when given one
+unit of impressions is $1-q_i$. The probability of forming no matches
+when giving $b$ units of visibility is $(1-q_i)^b$ and thus the
+probability of forming a match (and nice approximation to this
+probability) is:
+\begin{equation} 
+m_i(b) = 1 - (1 - q_i)^{b} \approx 1 - e^{-q_i b}
+\end{equation} 
+The platform now faces a constrained optimization problem:  
+\begin{equation}
+\max_{\vec{b}} \quad L = \sum_i \left(1 - e^{-q_i b_i}\right) + \lambda \left(A - \sum b_i\right) 
+\end{equation} 
+The first order condition is $q_i e^{-q_i b_i} - \lambda \ge 0$. The
+shadow value of the constraint is $\lambda$, which can be thought of
+the additional matches possible from one additional unit of attention
+to distribute. At the optimum, each seller either (a) offers the same
+marginal probability of forming a match or (b) gets no attention at
+all. We can re-formulate the FOC as a linear equation $-q_i b_i + \log
+\lambda (q_i)^{-1} = 0$ conditional upon $a_i > 0$. 
+
+First let us consider the $n=2$ case and assume that there is an
+interior solution, i.e., $b_1 > 0$ and $b_2 > 0$. The first order
+conditions are:
+\begin{eqnarray}
+q_1 e^{-b_1q_1} + \lambda &=& 0 \nonumber\\
+q_2 e^{-b_2q_2} + \lambda &=& 0 \nonumber\\
+b_1 + b_2 = A 
+\end{eqnarray} 
+which we can re-write as 
+\begin{eqnarray}
+-b_1q_1 + b_2q_2  &=& \log \frac{q_2}{q_1} \nonumber\\
+b_1 + b_2 & = & A 
+\end{eqnarray} 
+which is a system of linear equations. To ease explication in the $n >
+2$ case, we will write this system in matrix notation. 
+\begin{equation}
+\left( \begin{array}{cc}
+-q_1 & q_2  \\
+1 & 1  \end{array} \right) 
+\left( \begin{array}{c}
+b_1   \\
+b_2    \end{array} \right)
+=
+\left( \begin{array}{c}
+\log \frac{q_2}{q_1}   \\
+A    \end{array} \right)
+\end{equation} 
+
+Let us now consider the $n > 2$ case. The matrix equation is the
+standard equation for a system of linear equations: $M \vec{b} =
+\Gamma$. We can define the entries of $M$ as:  
+\begin{equation}
+\mu_{ij} =
+\begin{cases}
+-q_i, & \text{if }i = j \wedge j \ne n \\
+q_{i+1}, & \text{if }i + 1 = j \wedge j \ne n \\ 
+1, & \text{else} 
+\end{cases}
+\end{equation}
+Note that the last row contains all $1$'s---this is just the
+constraint that the sum of all allocations equals the attention
+available. To construct the column vector $\Gamma$, we can use the
+same simplification of dividing the $i$th equation by the $i + 1$th
+equation to create:
+\begin{equation}
+\gamma_{i} = 
+\begin{cases}
+\log \frac{q_{i+1}}{q_{i}}, & \text{if }i < n \\
+A, & \text{if }j = n \\ 
+\end{cases}
+\end{equation}
+We have a system of linear equations that we can solve.  
+\begin{equation} 
+[ m_{ij} ] \vec{b} = [ \gamma_i ]
+\end{equation} 
+
+\paragraph{Finding interior solutions}
+Not all sellers will get attention in this formulation: if $q_k <
+\lambda^*$ (i.e., the marginal benefit from a seller when $a=0$ is
+less than the shadow value of the constraint at the optimum), the
+seller is excluded. One complication in the linear system approach
+outlined above is that solving the system does not exclude these
+sellers (they receive negative weight). Further, we cannot simply find
+the first negative weight seller and draw the cut-off there: the
+cutoff depends on the shadow value estimated with the proper set of
+workers. 
+
+A heuristic for solving the problem is to use a binary search to
+identify the smallest-q sellers that still receives positive attention
+the optimal solution, operating on list of sellers, sorted from
+highest to lowest value. This does require solving the system of
+linear equations at each step, though the speed of binary search
+(combined with some probably places for optimization) does not make
+this intractable.  
+
+% k = p_1 e^{p_1 x_1} =  p_2 e^{p_2 x_2} = p_3 e^{p_3 x_3}
+% ln(p_1) + p1*x1
+% Without coming up with an actual budget for each seller, 
+
+% The platform creator wants to make sure that of the buyer's searches,
+% a fraction $v$ ending up on veterans, and a fraction $1-v$ end up on 
+% novices.  
+
+%\input{insituend.tex}
+
+\subsection{Applied allocation of prominence}
+In the previous example, we talk about allocating prominence as if it
+were something that could be apportioned out by the platform by fiat,
+in whatever fine-grained distribution required. In reality, prominence
+on a platform is mediated by page position/rank order in returned
+search results, with each position offering some flow of page views
+and clicks (i.e., prominence). This means that prominence comes in
+``lumps'' that differ (often dramatically) in size, with the
+distribution of lump sizes seeming to follow familiar patterns across
+sites. What this means in practice is that turning platform
+preferences into prominence budgets is not sufficient: we need some
+mapping from these budgets to actual positions.
+
+Let us assume that we have $n$ individuals that we need to assign to
+$n$ slots. Each of the $n$ positions has a ``value'' $v$ (i.e., an
+associated visibility) such that $v_1 > v_2 > v_3 \ldots v_n$. In this
+paper, we will be concerned solely with stochastic assignment
+mechanisms, i.e., a mechanisms that will place an individual $i$ at
+position $j$ with probability $p_{ij}$. We evaluate allocations based
+on the expected values they generate for an individual $i$, which we
+will call $x^n_i = \sum_{j=1}^n p_{ij}v_j$, as well as the
+distributional properties of the allocation mechanism.
+

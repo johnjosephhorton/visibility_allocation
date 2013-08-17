@@ -1,0 +1,161 @@
+
+\section{Introduction} 
+
+In recent years, a number of electronic platforms that bring together
+buyers an sellers have emerged. Examples include Apple's app store
+(software, music, videos etc.), Amazon's seller network, eBay
+(physical goods), and labor or expertise (oDesk, Innocentive, Elance,
+99 Designs etc.). Prior research on two-sided platforms has focused
+primarily on price structure and levels and competition between
+platforms \citep{armstrong2006competition, rochet2003platform,
+  rochet2006two, parker2005two}. This literature is largely descriptive, but it could
+thought of as falling in the ``design economics'' literature
+\citep{roth2002economist}, where price structure and levels are the
+main instruments.
+
+% While it 
+% It is easy to show that under realistic assumptions that even under
+% the guidance of a benevolent social planner, the 
+
+%  The
+% reason for this design focus is that the platform needs to impose some
+% kind a price structure and level and these choices have implications
+% for revenue.\footnote{The problem is analogous to the enormous
+%   literature in public economics on optimal taxation}. We will show,
+% using a simple but empirically grounded model that even if the
+% platform was a benevolent social planner and had no need to impose
+% fees of any kind, the ``natural'' outcome of interactions between
+% buyers and sellers might not be welfare enhancing.
+
+Despite the existing platform literature on price, we take the view
+that price level and structure are not the only---and probably not he
+most useful---instruments in the platform's ``toolkit.'' The reason is
+that changing price structure and levels proves difficult in practice
+once a marketplace has gained traction. Further, price is difficult to
+experiment with, particularly when participants can easily compare
+notes. \footnote{The recent Netflix pricing debacle is an example of
+  the difficulty in making substantive price structure and level
+  changes.} Furthermore, even if prices were easy to change, having a
+simple price structure is often viewed as per se attractive from a
+marketing perspective.
+
+Given the limitations of price as a tool for platform design, what
+other factors can platforms control that can shape platform
+interactions in ways beneficial to the platform? We argue that one of
+the most ``tune-able'' and powerful instruments in the platform
+toolkit is the control of \emph{prominence} of users to each
+other. Prominence directly affects the probability of matches forming,
+since obviously parties that never see each other can never trade.
+
+In traditional, non-electronic markets, buyers and sellers are
+responsible for making themselves known to their would-be trading
+partners. Gaining prominence might require as little effort as showing
+up to trade at some specific time and place, or it might require a
+massive advertising campaign. Regardless, the market's allocation of
+prominence is de-centralized, arising from the decisions of many
+individual actors.\footnote{There seems to be no consensus on the
+  welfare properties of advertising. \cite{dixit1978advertising} argue
+  that under a range of plausible assumptions, advertising is socially
+  inefficient, though there are other works that take alternate views,
+  claiming it depends on a number of factors
+  \citep{becker1993simple}.}  By comparison, in electronic markets and
+on electronic platforms, prominence is inherently determined by the
+platform creators, as what is seen by users is set by the design
+choices and policies of the platform. This power to control prominence
+has not gone unnoticed or unexploited: the multi-billion dollar
+position-based online advertising industry
+\citep{varian2007position,edelman2005internet} is evidence for this
+point.
+
+Given the enormous literature on position auctions, one might be
+tempted to think that the allocation of prominence is a solved
+problem, with the solution being auctions. Although many platforms do
+make use of auctions, they are far from universal and even when they
+are used, often coexist with the unpaid ``organic'' display of
+participants. There are numerous reasons why a platform might eschew
+auctions but the general explanation is that platform member
+preferences and willingness to pay do not perfectly align with
+platform's preferences: the platform might worry that those choosing
+to pay for position might be adversely selected, or the platform might
+want to secure some minimal level of prominence for all users, to
+ensure their continued participation and thus sufficient market
+liquidity.  Even the existing of an explicit pay-for-prominence scheme
+might undermine the credibility and thus the usefulness of the
+platform as a whole.\footnote{An historic example is the legal
+  prohibition on ``Payola,'' or the practice of record companies
+  paying DJ's to play certain songs.} 
+
+% TK transaction costs of auctions 
+
+% We can now describe 
+
+\subsection{Overview of the paper} 
+In this paper, we consider the problem on a platform creator that has
+some preference over the matches formed on the platform and that these
+preferences will be acted upon by the platform allocating individuals
+some ``share'' of prominence in the marketplace. To motivate the
+problem, we first present a very simple model of platform dynamics
+that will show how a situation in which all participants have full
+knowledge all participants (i.e., prominence is irrelevant) is not
+socially optimal. We will show that this situation can be improved by
+restricting prominence. In the model, market failure arises from too
+much attention being focused on platform ``veteran'' sellers, with too
+little discovery of novice sellers---a problem known to be important
+in several marketplaces.
+
+The focus of the paper will shift to solving the problem in the form
+it is most likely to take in practice---allocating individuals to some
+number of ``slots,'' each which afford the occupant of that slot some
+share the of ``prominence'' which is attention from would-be buyers
+and can be thought of in practice as page views or impressions. We
+will assume that attention comes from buyers and that sellers are the
+ones being allocated prominence, though in reality, search could be
+conducted by buyers, sellers or both. Platform preferences for seller
+prominence are modeled as a ``budget'' for each seller, which is the
+share of the available prominence that the seller should receive in
+expectation. We will assume that the attention itself is homogeneous,
+i.e., we will not draw distinctions between which buyer is generating
+the attention.
+
+We will show by example that seemingly reasonable strategies for
+allocating sellers to slots (such as always rank ordering sellers by
+some notion of merit like feedback scores) leads to highly unequal
+allocations of prominence that are likely to be far away from the
+platform's preferences. Furthermore, these simple allocation
+mechanisms lack desirable properties like continuity (which can cause
+sellers with only slight differences receiving radically different
+amounts of attention on the platform). Using data from an actual
+two-sided platform, where we have measures of prominence and
+congestion, we will show that the buyer attention to different
+``slots'' (position in search results) follow a Zipfian distribution
+and that unless the platform's preferences for the allocation of
+prominence to sellers also follows the precise Zipfian distribution of
+attention shown to the slots.
+
+In this framework, the allocation of individuals to slots becomes an
+economic assignment problem. We review the existing literature on
+these mechanisms and propose two mechanisms of our own. The first
+mechanism is guaranteed to give allocations of prominence consistent
+with the platform's preferences (as captured by the sellers
+budgets). It works by solving an linear program. Unfortunately, it is
+impractical, having a computational complexity of $\mathcal{O}(n^5)$,
+making in unsuitable for the large-scale two-sided platforms
+motivating the problem.
+
+As an alternative, we propose a substitute which we call the ``reverse
+tontine'' (RT) mechanism. While it does not guarantee that prominence
+allocations are consistent with seller budgets, it does offer
+continuity and monotonicity in budgets with respect to the expected
+prominence allocation. Furthermore, the distribution of prominence
+allocations under RT for a higher budget seller first-order
+stochastically dominates the outcomes for a lower budget seller,
+ensuring that a rational seller will always prefer to have a higher
+budget. Simulation studies using parameters from an online labor
+market show that the RT does quite well in implementing the platform's
+preferences. As a practical matter, we show that RT allocations can be
+generated very quickly and has limited memory requirements. It is also
+easy to update with changed budgets and changes in the prominence
+associated with different slots, making it suitable for application on
+platforms with large numbers of participants.
+
+

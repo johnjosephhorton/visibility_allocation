@@ -1,0 +1,232 @@
+Dear John Horton
+
+We regret to inform you that your paper 211
+
+Title: The Allocation of Visibility on Two-Sided Platforms
+
+has not been accepted to appear in the ACM EC'12 conference.
+
+We received 219 submissions, most of which were very strong. Although we did increase the number of papers accepted this year over last year (accepting 73), we nevertheless faced the difficult task of rejecting many high quality submissions. The EC community clearly sends much of its best work to this conference! We’re glad to have received your submission.
+
+The reviews of your paper are included below.  While the reviews do not always reflect the full discussion of your paper and all of the reasons why it was accepted or rejected, we hope that you find them helpful for your future work. We also hope that you will consider submitting your work to future ACM EC conferences, and that we'll see you at EC'12 this coming June in Valencia.
+
+The conference program as well as the online registration form will be available on the conference website shortly.
+
+Finally, we’d like to point out two further opportunities to present your research in Valencia. First, EC has four workshops (on “Risk-aversion and Non Expected Utility Theories in Algorithmic Game Theory & Mechanism Design”, “Social Computing and User Generated Content”, “Ad Auctions”, and “Workshop on Incentives and Trust in E-Commerce”), with deadlines coming up soon. We encourage you to consider submitting to one of these; please see http://www.sigecom.org/ec12/schedule_workshops.html.
+
+Second, a new feature of EC this year is a (non-archival) poster session. This will feature work published since last year’s EC; it will be lightly reviewed only for fit to the conference. You can find more details at http://www.sigecom.org/ec12/callforposters.html.
+
+Best regards,
+
+Panos Ipeirotis
+Kevin Leyton-Brown
+ACM EC '12 Program Chairs
+
+------------- Review from Reviewer 1 -------------
+Evaluation of work and contribution           : 5
+Significance                                  : 5
+Originality and novelty                       : 5
+Relevance to the call of papers               : 5
+Readability and organization                  : 5
+Technical quality                             : 5
+Overall recommendation                        : 5
+Confidence                                    : 3
+A talk on this paper would be of interest to a broad cross-section of the EC community : 5
+
+-- Comments to the author(s):
+One reviewer liked this paper, but the other reviewers expressed skeptism I am afraid. I quite liked the topic myself but it strikes me there has been some work done on page position in marketing that it would be good to bring up too so that the authors don't overclaim novelty.
+-- Summary:
+I am afraid there were quite a few differing opinions about the approach this research took.
+---------- End of Review from Reviewer 1 ----------
+
+------------- Review from Reviewer 2 -------------
+Evaluation of work and contribution           : 6
+Significance                                  : 5
+Originality and novelty                       : 5
+Relevance to the call of papers               : 6
+Readability and organization                  : 6
+Technical quality                             : 6
+Overall recommendation                        : 6
+Confidence                                    : 7
+A talk on this paper would be of interest to a broad cross-section of the EC community : 6
+
+-- Comments to the author(s):
+The paper addresses an interesting problem of assigning positions to platform participants. The problem is interesting. The authors highlight differences relative to other similar problems that have been addressed. they also bring in the issue of run time and computational aspects that economists have not looked into. The technical contributions are somewhat limited and the findings as expected. There was a lot of discussion on this paper following author responses.
+
+
+
+Ultimately, the entire review team feels that although the problem is novel, the paper neither reports any novel/interesting findings nor makes any methodological contributions. The paper is headed in the right direction but needs some more work before it is ready for EC audiences. I recommend that the authors continue working on it and try again next year (or another good conference).
+-- Summary:
+The paper addresses an interesting problem of assigning positions to platform participants. The problem is interesting. The authors highlight differences relative to other similar problems that have been addressed. they also bring in the issue of run time and computational aspects that economists have not looked into. The technical contributions are somewhat limited and the findings as expected. There was a lot of discussion on this paper following author responses.
+
+
+
+Ultimately, the entire review team feels that although the problem is novel, the paper neither reports any novel/interesting findings nor makes any methodological contributions. The paper is headed in the right direction but needs some more work before it is ready for EC audiences. I recommend that the authors continue working on it and try again next year (or another good conference).
+---------- End of Review from Reviewer 2 ----------
+
+------------- Review from Reviewer 3 -------------
+Evaluation of work and contribution           : 3
+Significance                                  : 3
+Originality and novelty                       : 3
+Relevance to the call of papers               : 8
+Readability and organization                  : 5
+Technical quality                             : 3
+Overall recommendation                        : 4
+Confidence                                    : 8
+A talk on this paper would be of interest to a broad cross-section of the EC community : 7
+
+-- Comments to the author(s):
+In two sided, online crowdsourcing markets the employers and employees must
+
+seek each other out.  In doing so each party has a limited amount of
+
+visibility for the other party.  For example, due to screen space
+
+restrictions only a certain number of search results can be returned.
+
+Moreover, due to time and cognitive restrictions there are only so many
+
+search results either party can review.  The authors seek to allocate the
+
+limited amount of visibility to help the quality of the matching between
+
+employers and employees.
+
+
+
+The authors are studying a specific, well motivated question.  Yet, the
+
+introduction of this paper is overly general.  The authors discuss all
+
+"platforms" as if their solution can be applied from crowdsourcing to
+
+operating systems to offline markets.  This greatly misleads the reader
+
+into thinking they are solving a much bigger, more general problem than
+
+they actually are.  Along these lines the authors discuss Aristotle's ideas
+
+on justice, when the point the authors are making is simply that a
+
+matching system should be fair.  Finally, the authors do not have a related
+
+work section.  Thus it is difficult to tell exactly how their work is
+
+different than prior work.
+
+
+
+In general, the authors have made a good start in answering this question
+
+but this paper do not provide sufficient contribution to be included in EC.
+
+Technically it is not clear why the authors are computing the permutation
+
+matrices Pi_k in Algorithm 1.  A simple algorithm to compute these would
+
+certainly have a high running time.  Since the other algorithms the authors
+
+come up with do not have to compute these matrices they run much faster.
+
+Thus the reader feels like the authors are just using Algorithm 1 as a
+
+straw man algorithm that runs unnecessarily slowly.
+
+
+
+The proofs are relatively straightforward thus there isn't much new
+
+technical content in this work.  The authors experimentally validate their
+
+algorithms on only one data set from one company which is not enough to
+
+provide a convincing validation.  Finally, in the experimental validation
+
+section the authors say that typically employers receive 10 applications
+
+for a job.  This makes me wonder if visibility is an issue at all.
+
+
+
+Minor points:
+
+The authors estimate the exponent on a Zipfian distribution but do not say
+
+how they did so.  The authors should use the techniques of Clauset, Shalizi
+
+and Newman to do this properly.
+
+
+
+The log-log plots should be done according to the paper by Li, Waldinger et
+
+al in Internet Mathematics to properly show a heavy tailed distribution.
+
+
+
+Amendments based on author rebuttal:
+
+I was too harsh on the paper for the overly general introduction.  I amended my scores for that.  However, I still believe the theory and experiments are too superficial for a conference of the quality of EC.
+-- Summary:
+This paper is clearly below the bar for EC.
+---------- End of Review from Reviewer 3 ----------
+
+------------- Review from Reviewer 4 -------------
+Evaluation of work and contribution           : 7
+Significance                                  : 5
+Originality and novelty                       : 4
+Relevance to the call of papers               : 8
+Readability and organization                  : 10
+Technical quality                             : 8
+Overall recommendation                        : 8
+Confidence                                    : 7
+A talk on this paper would be of interest to a broad cross-section of the EC community : 4
+
+-- Comments to the author(s):
+The Allocation of Visibility on Two-Sided Platforms
+
+
+
+Summary
+
+
+
+This papers considers platforms that provide ordered lists of sellers to buyers and which to order sellers on the basis of “merit” (and independently of the price sellers are willing to pay for prominent positions). A naaive approach is to always order sellers sequentially in terms of their merit every time the list is displayed. The problem is that the visibility of sellers rapidly declines for positions lower in the list. Two sellers with almost identical merit scores can than receive very different outcomes. This paper considers alternative ways in which sellers can stochastically ordered, and how such stochastic ordering can be implemented in practice. The mechanisms proposed are tested on data from oDesk.
+
+
+
+First the paper develops a relatively natural equity criterion and shows that this can be achieved by a probabilistic assignment of sellers to positions, which can be found as the solution a convex optimization problem. However, implementation of this probabilistic assignment requires identifying a sequence of permutations for the sellers (corresponding to their ordering in the list) and associated probability weights. While this is possible utilizing a theorem from Birkhoff, and a simple algorithm is presented to identify these permutations, the algorithm runs relatively slowly and is not feasible to implement in practice. The paper then presents an alternative simple mechanism that amounts to weighted random serial dictatorship. Although this mechanism does not satisfy the equity criterion, it does retain many of the other nice properties the Equitable Criterion algorithm had. In addition it can be run relatively quickly and in practice gets close to achieving the equity cr
+ iterion.
+
+
+
+Evaluation
+
+
+
+The paper addresses an interesting and novel market design question. While the question is not especially challenging and the proposed solutions are not particularly innovative, it is a careful piece of research and I enjoyed reading the paper. The paper addresses the most important practical questions which arise in the situation considered and proposes sensible solutions. The Equitable Criterion algorithm is particularly nice and represents a clean application of the theorem due to Birkhoff.
+-- Summary:
+The questions addressed are not espeically challenging. Nevertheless, the analysis is very careful and well executed. Supported by the analysis of the oDesk data I think it will interest market designers.
+---------- End of Review from Reviewer 4 ----------
+
+------------- Review from Reviewer 5 -------------
+Evaluation of work and contribution           : 9
+Significance                                  : 9
+Originality and novelty                       : 9
+Relevance to the call of papers               : 9
+Readability and organization                  : 10
+Technical quality                             : 9
+Overall recommendation                        : 9
+Confidence                                    : 6
+A talk on this paper would be of interest to a broad cross-section of the EC community : 9
+
+-- Comments to the author(s):
+The authors study visibility allocation in a labor marketplace, that is, how the visibility in search results reflects the merit of the individuals that participate in the results within two-sided platforms. They propose characteristics than an assignment mechanism designed for repeated use should have: 1) the expected value of assignment should be monotonically increasing in an individual's budget and the expected value should be continuous and 2) equity: namely that an individual's share of the value from search position should be proportional to their budget share. One comment to the authors is that how did they incorporate typical characteristics of two-sided platforms, that is, the popularity of one side platform depends on that of the other platform, and vice versa. It was not clear to me how the authors incorporated these features into their model.
+-- Summary:
+The authors study visibility allocation in a labor marketplace, that is, how the visibility in search results reflects the merit of the individuals that participate in the results within two-sided platforms. They propose characteristics than an assignment mechanism designed for repeated use should have: 1) the expected value of assignment should be monotonically increasing in an individual's budget and the expected value should be continuous and 2) equity: namely that an individual's share of the value from search position should be proportional to their budget share. One comment to the authors is that how did they incorporate typical characteristics of two-sided platforms, that is, the popularity of one side platform depends on that of the other platform, and vice versa. It was not clear to me how the authors incorporated these features into their model.
+---------- End of Review from Reviewer 5 ----------
+
+
+////////////////////////////////////////////////////
+Powered by ConfMaster.net
+///////////////////////////////////////////////////
